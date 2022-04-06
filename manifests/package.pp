@@ -5,7 +5,7 @@ class nodered::package inherits nodered {
 
   include ::nodejs
 
-  package { 'nodered':
+  package { 'node-red':
     ensure   => $nodered::version,
     provider => 'npm',
     require  => Package['npm']

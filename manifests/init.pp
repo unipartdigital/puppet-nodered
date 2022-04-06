@@ -8,6 +8,7 @@ class nodered (
   String $db_user,
   String $db_pass,
   Integer $db_port,
+  Boolean $manage_user,
   Boolean $manage_database,
   Boolean $manage_selinux,
   Enum['mysql', 'postgres'] $db_type,

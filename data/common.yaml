@@ -3,11 +3,5 @@ nodered::version: latest
 nodered::base_dir: /opt/nodered
 nodered::owner: nodered
 nodered::group: nodered
-nodered::db_host: localhost
-nodered::db_user: nodered
-nodered::db_pass: ''
-nodered::db_port: 5432
 nodered::manage_user: true
-nodered::manage_database: false
 nodered::manage_selinux: false
-nodered::db_type: postgres

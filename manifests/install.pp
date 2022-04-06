@@ -2,7 +2,6 @@
 class nodered::install inherits nodered {
   require nodered::selinux
   require nodered::package
-  require nodered::db
 
   # file { "${nodered::docroot}/LocalSettings.php":
   #   content => template("${module_name}/opt/nodered/docroot/LocalSettings.php.erb"),

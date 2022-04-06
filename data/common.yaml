@@ -5,6 +5,7 @@ nodered::owner: nodered
 nodered::group: nodered
 nodered::db_host: localhost
 nodered::db_user: nodered
+nodered::db_pass: null
 nodered::db_port: 5432
 nodered::manage_database: true
 nodered::manage_selinux: false

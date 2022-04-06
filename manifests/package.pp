@@ -5,6 +5,12 @@ class nodered::package inherits nodered {
 
   include ::nodejs
 
+  nodejs::npm::global_config_entry { 'unsafe-perm':
+    ensure => present,
+    value  => true,
+    before => Package['node-red']
+  }
+
   package { 'node-red':
     ensure   => $nodered::version,
     provider => 'npm',

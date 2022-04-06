@@ -1,6 +1,7 @@
 # =Class nodered::package
 class nodered::package inherits nodered {
   require nodered::selinux
+  require nodered::user
 
   include ::nodejs
 

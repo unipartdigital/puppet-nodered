@@ -19,6 +19,7 @@ class nodered (
   }
 
   contain nodered::selinux
+  contain nodered::user
   contain nodered::package
   contain nodered::db
   contain nodered::install

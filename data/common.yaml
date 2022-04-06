@@ -7,6 +7,6 @@ nodered::db_host: localhost
 nodered::db_user: nodered
 nodered::db_pass: ''
 nodered::db_port: 5432
-nodered::manage_database: true
+nodered::manage_database: false
 nodered::manage_selinux: false
 nodered::db_type: postgres

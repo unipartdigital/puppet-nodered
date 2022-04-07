@@ -29,7 +29,7 @@ class nodered::user inherits nodered {
           owner   => $nodered::owner,
           group   => $nodered::group,
           mode    => '0600',
-          require => File["${nodered::real_home}.ssh"],
+          require => File["${nodered::real_home}/.ssh"],
         }
       }
     }

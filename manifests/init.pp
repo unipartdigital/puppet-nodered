@@ -1,5 +1,5 @@
-# =Class node-red
-class node-red (
+# =class nodered
+class nodered (
   String $version,
   String $base_dir,
   String $owner,
@@ -9,9 +9,9 @@ class node-red (
   Boolean $manage_selinux,
   Boolean $manage_service,
 ) {
-  contain node-red::selinux
-  contain node-red::user
-  contain node-red::package
-  contain node-red::install
-  contain node-red::service
+  contain nodered::selinux
+  contain nodered::user
+  contain nodered::package
+  contain nodered::install
+  contain nodered::service
 }

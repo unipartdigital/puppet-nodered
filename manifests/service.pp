@@ -1,8 +1,8 @@
-#= node-red::service
-class node-red::service inherits node-red {
-  require node-red::install
+#= nodered::service
+class nodered::service inherits nodered {
+  require nodered::install
 
-  if $node-red::manage_service {
+  if $nodered::manage_service {
     file { '/etc/systemd/system/node-red.service':
       ensure  => present,
       owner   => 'root',

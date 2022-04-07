@@ -2,9 +2,9 @@
 Description=Node-RED service
 
 [Service]
-User=<%= @node-red_user %>
-Group=<%= @node-red_user %>
-ExecStart=/usr/bin/node-red -u <%= scope['node-red::base_dir'] %> -p <%= scope['node-red::listen_port'] %>
+User=<%= scope['nodered::owner'] %>
+Group=<%= scope['nodered::group'] %>
+ExecStart=/usr/bin/node-red -u <%= scope['nodered::base_dir'] %> -p <%= scope['nodered::listen_port'] %>
 
 [Install]
 WantedBy=multi-user.target

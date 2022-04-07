@@ -1,14 +1,14 @@
-# =Class node-red::user
-class node-red::user inherits node-red {
-  if $node-red::manage_user {
-    group { $node-red::group:
+# =Class nodered::user
+class nodered::user inherits nodered {
+  if $nodered::manage_user {
+    group { $nodered::group:
       ensure => present
     }
 
-    user { $node-red::owner:
+    user { $nodered::owner:
       ensure  => present,
-      gid     => $node-red::group,
-      require => Group[$node-red::group]
+      gid     => $nodered::group,
+      require => Group[$nodered::group]
     }
   }
 }

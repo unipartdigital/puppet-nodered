@@ -16,7 +16,7 @@ class nodered (
 ) {
   $real_home = $home? {
     ''      => "/home/${owner}",
-    Default => $home
+    default => $home
   }
   contain nodered::selinux
   contain nodered::user

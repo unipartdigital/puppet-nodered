@@ -8,5 +8,3 @@ ExecStart=/usr/bin/node-red -u <%= scope['nodered::flow_dir'] %>/<%= @flow['path
 
 [Install]
 WantedBy=multi-user.target
-Wants=postgresql.service
-After=postgresql.service

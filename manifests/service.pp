@@ -3,7 +3,7 @@ class nodered::service inherits nodered {
   require nodered::install
 
   if $nodered::manage_service {
-    $nodered::flows.each |$flow_name, $options| {
+    $nodered::flows.each |$flow_name, $flow| {
       file { "/etc/systemd/system/node-red-${$flow_name}.service":
         ensure  => present,
         owner   => 'root',

@@ -3,7 +3,7 @@ class nodered::install inherits nodered {
   require nodered::package
 
   $nodered::flows.each |$flow_name, $flow| {
-    vcsrepo { $flow['path']:
+    vcsrepo { "${nodered::flow_dir}/${flow['path']}":
       ensure   => latest,
       user     => $nodered::owner,
       provider => git,

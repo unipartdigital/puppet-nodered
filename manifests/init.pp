@@ -6,7 +6,7 @@ class nodered (
   String $home,
   String $flow_dir,
   Hash[String, String] $ssh_keys,
-  Hash[String, Hash[String, String]] $flows,
+  Hash[String, Hash[String, Variant[String, Integer]]] $flows,
   Boolean $manage_user,
   Boolean $manage_home,
   Boolean $manage_keys,

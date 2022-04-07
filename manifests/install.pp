@@ -8,6 +8,8 @@ class nodered::install inherits nodered {
     vcsrepo { $path:
       ensure   => latest,
       user     => $nodered::owner,
+      owner    => $nodered::owner,
+      group    => $nodered::group,
       provider => git,
       source   => $flow['source'],
       identity => "${nodered::real_home}/.ssh/${flow['key']}"

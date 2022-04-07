@@ -3,6 +3,7 @@ nodered::version: latest
 nodered::base_dir: /opt/node-red
 nodered::owner: node-red
 nodered::group: node-red
+nodered::listen_port: 5000
 nodered::manage_user: true
 nodered::manage_selinux: false
 nodered::manage_service: true

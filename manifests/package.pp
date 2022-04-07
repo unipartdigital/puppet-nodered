@@ -17,7 +17,7 @@ class nodered::package inherits nodered {
     require  => Package['npm']
   }
 
-  file { $nodered::base_dir:
+  file { $nodered::flow_dir:
     ensure => directory,
     owner  => $nodered::owner,
     group  => $nodered::group,

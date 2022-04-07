@@ -4,7 +4,7 @@ Description=Node-RED service
 [Service]
 User=<%= scope['nodered::owner'] %>
 Group=<%= scope['nodered::group'] %>
-ExecStart=/usr/bin/node-red -u <%= scope['nodered::base_dir'] %> -p <%= scope['nodered::listen_port'] %>
+ExecStart=/usr/bin/node-red -u <%= @options['dir'] %> -p <%= @options['port'] %>
 
 [Install]
 WantedBy=multi-user.target

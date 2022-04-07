@@ -1,13 +1,12 @@
 # =class nodered
 class nodered (
   String $version,
-  String $base_dir,
   String $owner,
   String $group,
   String $home,
+  String $flow_dir,
   Hash[String, String] $ssh_keys,
   Array[Hash[String, String]] $flows,
-  Integer $listen_port,
   Boolean $manage_user,
   Boolean $manage_home,
   Boolean $manage_keys,

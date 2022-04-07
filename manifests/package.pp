@@ -1,7 +1,7 @@
-# =Class nodered::package
-class nodered::package inherits nodered {
-  require nodered::selinux
-  require nodered::user
+# =Class node-red::package
+class node-red::package inherits node-red {
+  require node-red::selinux
+  require node-red::user
 
   include ::nodejs
 
@@ -12,15 +12,15 @@ class nodered::package inherits nodered {
   }
 
   package { 'node-red':
-    ensure   => $nodered::version,
+    ensure   => $node-red::version,
     provider => 'npm',
     require  => Package['npm']
   }
 
-  file { $nodered::base_dir:
+  file { $node-red::base_dir:
     ensure => directory,
-    owner  => $nodered::owner,
-    group  => $nodered::group,
+    owner  => $node-red::owner,
+    group  => $node-red::group,
     mode   => '0755',
   }
 }

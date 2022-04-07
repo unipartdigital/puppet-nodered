@@ -1,7 +1,8 @@
 ---
-nodered::version: latest
-nodered::base_dir: /opt/nodered
-nodered::owner: nodered
-nodered::group: nodered
-nodered::manage_user: true
-nodered::manage_selinux: false
+node-red::version: latest
+node-red::base_dir: /opt/node-red
+node-red::owner: node-red
+node-red::group: node-red
+node-red::manage_user: true
+node-red::manage_selinux: false
+node-red::manage_service: true

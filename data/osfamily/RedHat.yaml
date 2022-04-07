@@ -1,1 +1,1 @@
-nodered::manage_selinux: true
+node-red::manage_selinux: true

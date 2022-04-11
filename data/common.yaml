@@ -1,4 +1,10 @@
 ---
+lookup_options:
+  nodered::flows:
+    merge:
+      strategy: deep
+      merge_hash_arrays: true
+
 nodered::version: latest
 nodered::owner: node-red
 nodered::group: node-red

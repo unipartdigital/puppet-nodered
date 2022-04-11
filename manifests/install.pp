@@ -15,7 +15,7 @@ class nodered::install inherits nodered {
       identity => "${nodered::real_home}/.ssh/${flow['key']}"
     }
 
-    file_line { "${flow} user settings":
+    file_line { "${flow_name} user settings":
       path    => "${path}/settings.js",
       line    => "userDir: \"${nodered::home}/.node-red/\",",
       match   => '^\s*(\/\/)?\s*userDir\:',
@@ -23,7 +23,7 @@ class nodered::install inherits nodered {
     }
 
     if $flow['secret'] {
-      file_line { "${flow} credentials":
+      file_line { "${flow_name} credentials":
         path    => "${path}/settings.js",
         line    => "credentialSecret: \"${flow['secret']}\",",
         match   => '^\s*(\/\/)?\s*credentialSecret\:',

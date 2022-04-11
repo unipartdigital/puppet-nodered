@@ -5,7 +5,7 @@ nodered::group: node-red
 nodered::home: /opt/node-red
 nodered::flow_dir: "%{lookup('nodered::home')}/flows"
 nodered::ssh_keys: {}
-nodered::flows: []
+nodered::flows: {}
 nodered::manage_user: true
 nodered::manage_home: true
 nodered::manage_keys: true

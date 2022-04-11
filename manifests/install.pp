@@ -15,6 +15,22 @@ class nodered::install inherits nodered {
       identity => "${nodered::real_home}/.ssh/${flow['key']}"
     }
 
+    file_line { "${flow} user settings":
+      path    => "${path}/settings.js",
+      line    => "userDir: \"${nodered::home}/.node-red/\",",
+      match   => '^\s*(\/\/)?\s*userDir\:',
+      require => Vcsrepo[$path]
+    }
+
+    if $flow['secret'] {
+      file_line { "${flow} credentials":
+        path    => "${path}/settings.js",
+        line    => "credentialSecret: \"${flow['secret']}\",",
+        match   => '^\s*(\/\/)?\s*credentialSecret\:',
+        require => Vcsrepo[$path]
+      }
+    }
+
     nodejs::npm { $path:
       ensure           => 'present',
       target           => $path,

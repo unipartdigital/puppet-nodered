@@ -9,6 +9,7 @@ class nodered::user inherits nodered {
       ensure     => present,
       gid        => $nodered::group,
       home       => $nodered::real_home,
+      shell      => '/bin/bash',
       managehome => $nodered::manage_home,
       require    => Group[$nodered::group]
     }
